@@ -1,0 +1,65 @@
+body{
+    background-color:green;
+        align-items:center;
+}
+.cards{
+    float:left;
+}
+.card{
+    background-color:white;
+    border:medium solid black;
+    border-radius:0.5em;
+    position:relative;
+    height:3.5in;
+    width:2.5in;
+    margin:1em;
+}
+.topleft{
+    top:0;
+    left:0;
+}
+.bottomright{
+    bottom:0;
+    right:0;
+}
+.center{
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+}
+.bottomright{
+    transform:rotate(180deg);
+}
+.bottomright, .topleft, .center{
+    position:absolute;
+    text-align:center;
+}
+.topleft, .bottomright{
+    padding:0.25em;
+    font-size:200%;
+    
+}
+.center{
+    font-size:400%;
+}
+.card[data-rank=J] span.rank::before{
+    content:"J";
+}
+.card[data-suite="spades"]{
+    color:black;
+}
+.card[data-suite="diamonds"]{
+    color:red;
+}
+.card[data-suite="spades"] span.suite::before{
+    content:"\2660"
+}
+.card[data-suite="diamonds"] span.suite::before{
+    content:"\2662"
+}
+h1{
+    color:orange;
+    font-family:bold;
+    margin-right:auto;
+    margin-left:auto;
+}
